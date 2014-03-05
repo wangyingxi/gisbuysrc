@@ -1,0 +1,4 @@
+gy_mall:
+    resource: "@GyMallBundle/Resources/config/routing.yml"
+    prefix:   /
+

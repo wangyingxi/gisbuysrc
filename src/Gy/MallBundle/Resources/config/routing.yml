@@ -1,0 +1,3 @@
+gy_mall_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: GyMallBundle:Default:index }

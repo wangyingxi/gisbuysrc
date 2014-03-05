@@ -1,0 +1,7 @@
+parameters:
+#    gy_mall.example.class: Gy\MallBundle\Example
+
+services:
+#    gy_mall.example:
+#        class: %gy_mall.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
