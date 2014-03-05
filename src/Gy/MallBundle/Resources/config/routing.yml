@@ -1,3 +1,6 @@
 gy_mall_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: GyMallBundle:Default:index }
+gy_mall_create:
+    pattern:  /create
+    defaults: { _controller: GyMallBundle:Default:create }

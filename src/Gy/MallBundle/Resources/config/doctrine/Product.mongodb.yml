@@ -1,0 +1,14 @@
+Gy\MallBundle\Document\Product:
+    fields:
+        id:
+            id:  true
+        name:
+            type: string
+        price:
+            type: float
+        description:
+            type: string
+        category:
+            type: collection
+        createdat:
+            type: date
