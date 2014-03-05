@@ -10,5 +10,7 @@ Gy\MallBundle\Document\Product:
             type: string
         category:
             type: collection
-        createdat:
+        attributes:
+            type: hash
+        createdAt:
             type: date

@@ -16,7 +16,8 @@ class DefaultController extends Controller {
         $product = new Product();
         $product->setName('A Foo Bar');
         $product->setPrice('19.99');
-
+        $product->setCategory(array("3923", "23938"));
+        $product->setAttributes(array("gender" => "male", "age" => 28));
         $dm = $this->get('doctrine_mongodb')->getManager();
         $dm->persist($product);
         $dm->flush();

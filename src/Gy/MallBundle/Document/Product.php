@@ -14,6 +14,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
  */
 class Product
 {
+    
     /**
      * @var MongoId $id
      */
@@ -40,9 +41,9 @@ class Product
     protected $category;
 
     /**
-     * @var date $createdat
+     * @var date $createdAt
      */
-    protected $createdat;
+    protected $createdAt;
 
 
     /**
@@ -144,24 +145,51 @@ class Product
     }
 
     /**
-     * Set createdat
+     * Set createdAt
      *
-     * @param date $createdat
+     * @param date $createdAt
      * @return self
      */
-    public function setCreatedat($createdat)
+    public function setCreatedAt($createdAt)
     {
-        $this->createdat = $createdat;
+        $this->createdAt = $createdAt;
         return $this;
     }
 
     /**
-     * Get createdat
+     * Get createdAt
      *
-     * @return date $createdat
+     * @return date $createdAt
      */
-    public function getCreatedat()
+    public function getCreatedAt()
     {
-        return $this->createdat;
+        return $this->createdAt;
+    }
+    /**
+     * @var hash $attributes
+     */
+    protected $attributes;
+
+
+    /**
+     * Set attributes
+     *
+     * @param hash $attributes
+     * @return self
+     */
+    public function setAttributes($attributes)
+    {
+        $this->attributes = $attributes;
+        return $this;
+    }
+
+    /**
+     * Get attributes
+     *
+     * @return hash $attributes
+     */
+    public function getAttributes()
+    {
+        return $this->attributes;
     }
 }
