@@ -4,12 +4,19 @@ namespace Gy\MallBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Gy\MallBundle\Document\Product;
 
 class DefaultController extends Controller {
 
-    public function indexAction($name) {
-        return $this->render('GyMallBundle:Default:index.html.twig', array('name' => $name));
+    public function indexAction() {
+        echo "i am in indexAction";exit;
+    }
+
+    public function helloAction($name) {
+        $key = $this->container->getParameter('myname');
+        return new Response($key);
+        //return $this->render('GyMallBundle:Default:index.html.twig', array('name' => $name));
     }
 
     public function createAction() {
@@ -51,4 +58,28 @@ class DefaultController extends Controller {
         return $this->redirect($this->generateUrl('homepage'));
     }
 
+//    public function translateAction(Request $request) {
+    public function translateAction() {
+        $request = Request::createFromGlobals();
+//        var_dump($request);exit;
+        echo($request->query->get('aparam'));exit;
+        $request->setLocale('fr');
+        $translated = $this->get('translator')->trans('Symfony2 is great');
+//        echo $request->getLocale();exit;
+        return new Response($translated);
+    }
+
+    public function t1Action($_locale) {
+        $request = Request::createFromGlobals();
+//        echo($request->query->get('name'));exit;
+        echo($_locale);exit;
+    }
+    
+    public function contactAction($_locale) {
+        $request = Request::createFromGlobals();
+//        echo($request->getLocale());exit;
+        //echo('locale is : ' . $_locale);exit;
+//        $this->get('translator')->setLocale('ca_ES');
+        echo($this->get('translator')->getLocale());exit;
+    }
 }

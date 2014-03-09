@@ -1,6 +1,27 @@
+gy_mall_index:
+    pattern: /
+    defaults: { _controller: GyMallBundle:Default:index }
 gy_mall_homepage:
     pattern:  /hello/{name}
-    defaults: { _controller: GyMallBundle:Default:index }
+    defaults: { _controller: GyMallBundle:Default:hello }
 gy_mall_create:
     pattern:  /create
     defaults: { _controller: GyMallBundle:Default:create }
+gy_mall_translate:
+    pattern:  /translate
+    defaults: { _controller: GyMallBundle:Default:translate }
+gy_mall_t1:
+    pattern: /t1
+    host: www.a.com
+    defaults: { _controller: GyMallBundle:Default:t1, _locale: wyxxxx2 }
+
+gy_mall_t2:
+    pattern: /t1
+    host: www.a.cn
+    defaults: { _controller: GyMallBundle:Default:t1, _locale: sosososo }
+    
+gy_mall_contact:
+    pattern: /{_locale}/contact
+    defaults: { _controller: GyMallBundle:Default:contact, _locale: de }
+    requirements:
+        _locale: en|fr|de

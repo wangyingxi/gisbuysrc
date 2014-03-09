@@ -24,6 +24,17 @@ $kernel->loadClassCache();
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
+
+/*
+ * Request Testing 
+ * (Added By Wangyingxi on 2014-03-08)
+ */
+
+//echo($request->getHost() . '-----------');
+//echo($request->headers->get('Accept-Language') . '-----------');
+//echo($request->headers->get('User-Agent') . '-----------');
+//exit;
+
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
