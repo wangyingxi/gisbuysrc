@@ -13,15 +13,29 @@ gy_mall_translate:
 gy_mall_t1:
     pattern: /t1
     host: www.a.com
-    defaults: { _controller: GyMallBundle:Default:t1, _locale: wyxxxx2 }
+    defaults: { _controller: GyMallBundle:Default:t1, _locale: global }
 
 gy_mall_t2:
     pattern: /t1
     host: www.a.cn
-    defaults: { _controller: GyMallBundle:Default:t1, _locale: sosososo }
+    defaults: { _controller: GyMallBundle:Default:t1, _locale: cn }
     
 gy_mall_contact:
     pattern: /{_locale}/contact
     defaults: { _controller: GyMallBundle:Default:contact, _locale: de }
     requirements:
         _locale: en|fr|de
+
+gy_mall_thumbnail:
+    pattern:  /thumbnail
+    defaults: { _controller: GyMallBundle:Default:thumbnail }
+gy_mall_u:
+    pattern: /u
+    defaults: { _controller: GyMallBundle:Default:u }
+gy_mall_upload:
+    pattern: /upload
+    defaults: { _controller: GyMallBundle:Default:upload }
+    
+gy_mall_admin_index:
+    pattern: /admin/index
+    defaults: { _controller: GyMallBundle:Admin:index }

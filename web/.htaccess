@@ -22,7 +22,8 @@ DirectoryIndex app.php
     #RewriteCond %{HTTP_HOST} ^www\.a\.com
     RewriteRule ^(.*)$ http://www.a.com/$1 [R=301,L]
     #RewriteRule ^(.*)$ http://a.com/$1 [R=301,L]
-
+    RewriteCond %{HTTP_HOST} ^a\.cn
+    RewriteRule ^(.*)$ http://www.a.cn/$1 [R=301,L]
 
     # Redirect to URI without front controller to prevent duplicate content
     # (with and without `/app.php`). Only do this redirect on the initial
