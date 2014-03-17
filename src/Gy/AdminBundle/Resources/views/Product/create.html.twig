@@ -1,0 +1,13 @@
+{% extends "GyAdminBundle::base.html.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="/statics/uploadify/uploadify.css">
+{% endblock %}
+
+{% block content %}
+{{ form(form) }}
+{% endblock %}
+
+{% block js %}
+<script src="/statics/uploadify/jquery.uploadify.min.js"></script>
+{% endblock %}

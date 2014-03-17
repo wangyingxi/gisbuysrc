@@ -1,0 +1,19 @@
+gy_admin_homepage:
+    pattern:  /admin
+    defaults: { _controller: GyAdminBundle:Default:index }
+
+gy_admin_product_index:
+    pattern: /admin/product/index
+    defaults: { _controller: GyAdminBundle:Product:index }
+
+gy_admin_product_create:
+    pattern: /admin/product/create
+    defaults: { _controller: GyAdminBundle:Product:create }
+
+gy_admin_product_edit:
+    pattern: /admin/product/edit
+    defaults: { _controller: GyAdminBundle:Product:edit }
+
+gy_admin_product_delete:
+    pattern: /admin/product/delete
+    defaults: { _controller: GyAdminBundle:Product:delete }
