@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace Gy\MallBundle\Document;
+namespace Gy\CoreBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
@@ -44,6 +44,11 @@ class Product
      * @var date $createdAt
      */
     protected $createdAt;
+
+    /**
+     * @var hash $attributes
+     */
+    protected $attributes;
 
 
     /**
@@ -145,33 +150,6 @@ class Product
     }
 
     /**
-     * Set createdAt
-     *
-     * @param date $createdAt
-     * @return self
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return date $createdAt
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-    /**
-     * @var hash $attributes
-     */
-    protected $attributes;
-
-
-    /**
      * Set attributes
      *
      * @param hash $attributes
@@ -191,5 +169,27 @@ class Product
     public function getAttributes()
     {
         return $this->attributes;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param date $createdAt
+     * @return self
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return date $createdAt
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }

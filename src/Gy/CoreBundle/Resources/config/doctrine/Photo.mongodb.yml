@@ -1,0 +1,12 @@
+Gy\CoreBundle\Document\Photo:
+    fields:
+        id:
+            id:  true
+        name:
+            type: string
+        description:
+            type: string
+        photoType:
+            type: string
+        createdAt:
+            type: date
