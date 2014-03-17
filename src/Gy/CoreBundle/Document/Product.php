@@ -19,7 +19,11 @@ class Product
      * @var MongoId $id
      */
     protected $id;
-
+    
+    /**
+     * @var increment
+     */
+    protected $gid;
     /**
      * @var string $name
      */
