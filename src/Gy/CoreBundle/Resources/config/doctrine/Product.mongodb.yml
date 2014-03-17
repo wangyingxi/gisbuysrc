@@ -2,10 +2,12 @@ Gy\CoreBundle\Document\Product:
     fields:
         id:
             id:  true
+        gid:
+            type: increment
         name:
             type: string
         price:
-            type: float
+            type: collection
         description:
             type: string
         category:

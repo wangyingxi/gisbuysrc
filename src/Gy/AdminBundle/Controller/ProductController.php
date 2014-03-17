@@ -1,7 +1,7 @@
 <?php
 
 namespace Gy\AdminBundle\Controller;
-
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Gy\CoreBundle\Document\Product;
 
@@ -11,8 +11,14 @@ class ProductController extends Controller
     {
     }
 
-    public function createAction()
+    public function createAction(Request $request)
     {
+        if($request->isMethod('post')) {
+//            echo $request->request->get('name');
+//            exit;
+        } else {
+        }
+        
         $product = new Product();
         $product->setName('This is product name.');
 

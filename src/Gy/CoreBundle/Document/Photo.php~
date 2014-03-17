@@ -12,7 +12,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 /**
  * @MongoDB\Document
  */
-class Product
+class Photo
 {
     
     /**
@@ -21,19 +21,9 @@ class Product
     protected $id;
 
     /**
-     * @var increment $gid
-     */
-    protected $gid;
-
-    /**
      * @var string $name
      */
     protected $name;
-
-    /**
-     * @var collection $price
-     */
-    protected $price;
 
     /**
      * @var string $description
@@ -41,20 +31,15 @@ class Product
     protected $description;
 
     /**
-     * @var collection $category
+     * @var collection $photoType
      */
-    protected $category;
-
-    /**
-     * @var hash $attributes
-     */
-    protected $attributes;
+    protected $photoType;
 
     /**
      * @var date $createdAt
      */
     protected $createdAt;
-
+    
 
     /**
      * Get id
@@ -64,28 +49,6 @@ class Product
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set gid
-     *
-     * @param increment $gid
-     * @return self
-     */
-    public function setGid($gid)
-    {
-        $this->gid = $gid;
-        return $this;
-    }
-
-    /**
-     * Get gid
-     *
-     * @return increment $gid
-     */
-    public function getGid()
-    {
-        return $this->gid;
     }
 
     /**
@@ -111,28 +74,6 @@ class Product
     }
 
     /**
-     * Set price
-     *
-     * @param collection $price
-     * @return self
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return collection $price
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
@@ -155,47 +96,25 @@ class Product
     }
 
     /**
-     * Set category
+     * Set photoType
      *
-     * @param collection $category
+     * @param string $photoType
      * @return self
      */
-    public function setCategory($category)
+    public function setPhotoType($photoType)
     {
-        $this->category = $category;
+        $this->photoType = $photoType;
         return $this;
     }
 
     /**
-     * Get category
+     * Get photoType
      *
-     * @return collection $category
+     * @return string $photoType
      */
-    public function getCategory()
+    public function getPhotoType()
     {
-        return $this->category;
-    }
-
-    /**
-     * Set attributes
-     *
-     * @param hash $attributes
-     * @return self
-     */
-    public function setAttributes($attributes)
-    {
-        $this->attributes = $attributes;
-        return $this;
-    }
-
-    /**
-     * Get attributes
-     *
-     * @return hash $attributes
-     */
-    public function getAttributes()
-    {
-        return $this->attributes;
+        return $this->photoType;
     }
 
     /**
