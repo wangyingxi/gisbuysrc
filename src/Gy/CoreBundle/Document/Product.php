@@ -55,6 +55,7 @@ class Product
      */
     protected $createdAt;
 
+    
 
     /**
      * Get id
