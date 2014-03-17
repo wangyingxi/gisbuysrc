@@ -220,4 +220,112 @@ class Product
     {
         return $this->createdAt;
     }
+    /**
+     * @var string $chineseName
+     */
+    protected $chineseName;
+
+    /**
+     * @var float $cost
+     */
+    protected $cost;
+
+
+    /**
+     * Set chineseName
+     *
+     * @param string $chineseName
+     * @return self
+     */
+    public function setChineseName($chineseName)
+    {
+        $this->chineseName = $chineseName;
+        return $this;
+    }
+
+    /**
+     * Get chineseName
+     *
+     * @return string $chineseName
+     */
+    public function getChineseName()
+    {
+        return $this->chineseName;
+    }
+
+    /**
+     * Set cost
+     *
+     * @param float $cost
+     * @return self
+     */
+    public function setCost($cost)
+    {
+        $this->cost = $cost;
+        return $this;
+    }
+
+    /**
+     * Get cost
+     *
+     * @return float $cost
+     */
+    public function getCost()
+    {
+        return $this->cost;
+    }
+    /**
+     * @var boolean $isSerial
+     */
+    protected $isSerial;
+
+
+    /**
+     * Set isSerial
+     *
+     * @param boolean $isSerial
+     * @return self
+     */
+    public function setIsSerial($isSerial)
+    {
+        $this->isSerial = $isSerial;
+        return $this;
+    }
+
+    /**
+     * Get isSerial
+     *
+     * @return boolean $isSerial
+     */
+    public function getIsSerial()
+    {
+        return $this->isSerial;
+    }
+    /**
+     * @var int $sold
+     */
+    protected $sold;
+
+
+    /**
+     * Set sold
+     *
+     * @param int $sold
+     * @return self
+     */
+    public function setSold($sold)
+    {
+        $this->sold = $sold;
+        return $this;
+    }
+
+    /**
+     * Get sold
+     *
+     * @return int $sold
+     */
+    public function getSold()
+    {
+        return $this->sold;
+    }
 }

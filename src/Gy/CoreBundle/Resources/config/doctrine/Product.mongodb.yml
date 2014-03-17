@@ -6,6 +6,12 @@ Gy\CoreBundle\Document\Product:
             type: increment
         name:
             type: string
+        chineseName:
+            type: string
+        isSerial:
+            type: boolean
+        cost:
+            type: float
         price:
             type: collection
         description:
@@ -14,5 +20,7 @@ Gy\CoreBundle\Document\Product:
             type: collection
         attributes:
             type: hash
+        sold:
+            type: int
         createdAt:
             type: date
