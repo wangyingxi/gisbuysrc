@@ -28,7 +28,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-
+    # 关闭twig缓存
+    cache:            false
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"

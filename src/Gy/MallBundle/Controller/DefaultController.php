@@ -2,37 +2,39 @@
 
 namespace Gy\MallBundle\Controller;
 
-use Gy\MallBundle\Common\ImageImagick;
+use Gy\CoreBundle\Common\ImageImagick;
+use Gy\CoreBundle\Document\Product;
+use Gy\CoreBundle\Common\Tool;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Gy\MallBundle\Document\Product;
 
 class DefaultController extends Controller {
 
-    public function indexAction() {
-        echo "i am in indexAction";
-        exit;
-    }
+//    public function indexAction() {
+//        echo "i am in indexAction";
+//        exit;
+//    }
 
-    public function helloAction($name) {
-        $key = $this->container->getParameter('myname');
-        return new Response($key);
-        //return $this->render('GyMallBundle:Default:index.html.twig', array('name' => $name));
-    }
+//    public function helloAction($name) {
+//        $key = $this->container->getParameter('myname');
+//        return new Response($key);
+//        //return $this->render('GyMallBundle:Default:index.html.twig', array('name' => $name));
+//    }
 
-    public function createAction() {
-        $product = new Product();
-        $product->setName('A Foo Bar');
-        $product->setPrice('19.99');
-        $product->setCategory(array("3923", "23938"));
-        $product->setAttributes(array("gender" => "male", "age" => 28));
-        $dm = $this->get('doctrine_mongodb')->getManager();
-        $dm->persist($product);
-        $dm->flush();
-
-        return new Response('Created product id ' . $product->getId());
-    }
+//    public function createAction() {
+//        $product = new Product();
+//        $product->setName('A Foo Bar');
+//        $product->setPrice('19.99');
+//        $product->setCategory(array("3923", "23938"));
+//        $product->setAttributes(array("gender" => "male", "age" => 28));
+//        $dm = $this->get('doctrine_mongodb')->getManager();
+//        $dm->persist($product);
+//        $dm->flush();
+//
+//        return new Response('Created product id ' . $product->getId());
+//    }
 
     public function showAction($id) {
         $product = $this->get('doctrine_mongodb')
@@ -96,7 +98,7 @@ class DefaultController extends Controller {
 
     public function uAction() {
 //        return $this->render('GyMallBundle:Default:u.html.twig', array('param' => md5(microtime())));
-        return $this->render('GyMallBundle:Default:u.html.twig', array('param' => \Gy\MallBundle\Common\Tool::genGuid()));
+        return $this->render('GyMallBundle:Default:u.html.twig', array('param' => Tool::genGuid()));
     }
 
     public function uploadAction() {

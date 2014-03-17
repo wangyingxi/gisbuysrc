@@ -1,3 +1,11 @@
+gy_core:
+    resource: "@GyCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gy_admin:
+    resource: "@GyAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gy_mall:
     resource: "@GyMallBundle/Resources/config/routing.yml"
     prefix:   /

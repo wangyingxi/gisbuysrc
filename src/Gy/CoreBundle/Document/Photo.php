@@ -5,14 +5,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace Gy\MallBundle\Document;
+namespace Gy\CoreBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
  * @MongoDB\Document
  */
-class Product
+class Photo
 {
     
     /**
@@ -26,25 +26,20 @@ class Product
     protected $name;
 
     /**
-     * @var float $price
-     */
-    protected $price;
-
-    /**
      * @var string $description
      */
     protected $description;
 
     /**
-     * @var collection $category
+     * @var collection $photoType
      */
-    protected $category;
+    protected $photoType;
 
     /**
      * @var date $createdAt
      */
     protected $createdAt;
-
+    
 
     /**
      * Get id
@@ -79,28 +74,6 @@ class Product
     }
 
     /**
-     * Set price
-     *
-     * @param float $price
-     * @return self
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return float $price
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
@@ -123,25 +96,25 @@ class Product
     }
 
     /**
-     * Set category
+     * Set photoType
      *
-     * @param collection $category
+     * @param string $photoType
      * @return self
      */
-    public function setCategory($category)
+    public function setPhotoType($photoType)
     {
-        $this->category = $category;
+        $this->photoType = $photoType;
         return $this;
     }
 
     /**
-     * Get category
+     * Get photoType
      *
-     * @return collection $category
+     * @return string $photoType
      */
-    public function getCategory()
+    public function getPhotoType()
     {
-        return $this->category;
+        return $this->photoType;
     }
 
     /**

@@ -1,12 +1,13 @@
-gy_mall_index:
-    pattern: /
-    defaults: { _controller: GyMallBundle:Default:index }
-gy_mall_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: GyMallBundle:Default:hello }
-gy_mall_create:
-    pattern:  /create
-    defaults: { _controller: GyMallBundle:Default:create }
+#    gy_mall_index:
+#    pattern: /
+#    defaults: { _controller: GyMallBundle:Default:index }
+#    gy_mall_homepage:
+#    pattern:  /hello/{name}
+#    defaults: { _controller: GyMallBundle:Default:hello }
+#    gy_mall_create:
+#    pattern:  /create
+#    defaults: { _controller: GyMallBundle:Default:create }
+
 gy_mall_translate:
     pattern:  /translate
     defaults: { _controller: GyMallBundle:Default:translate }
@@ -35,7 +36,3 @@ gy_mall_u:
 gy_mall_upload:
     pattern: /upload
     defaults: { _controller: GyMallBundle:Default:upload }
-    
-gy_mall_admin_index:
-    pattern: /admin/index
-    defaults: { _controller: GyMallBundle:Admin:index }

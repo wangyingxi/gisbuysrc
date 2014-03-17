@@ -1,4 +1,4 @@
-Gy\MallBundle\Document\Product:
+Gy\CoreBundle\Document\Product:
     fields:
         id:
             id:  true

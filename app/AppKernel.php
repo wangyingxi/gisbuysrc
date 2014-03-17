@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Gy\MallBundle\GyMallBundle(),
+            new Gy\AdminBundle\GyAdminBundle(),
+            new Gy\CoreBundle\GyCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

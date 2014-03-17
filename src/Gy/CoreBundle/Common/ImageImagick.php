@@ -10,7 +10,7 @@
 
  *
  * */
-namespace Gy\MallBundle\Common;
+namespace Gy\CoreBundle\Common;
 
 class ImageImagick {
 
